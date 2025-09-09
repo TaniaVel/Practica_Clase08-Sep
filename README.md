@@ -9,3 +9,8 @@
 
 - git fetch
 - git pull
+
+# Comandos Python
+- py nombre.py
+- py -m pip install nombre
+    - pyodbc
