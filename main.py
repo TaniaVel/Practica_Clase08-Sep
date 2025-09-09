@@ -41,11 +41,18 @@ class Conexion:
         cursor = conexion.cursor();
         cursor.execute(consulta);
 
+        lista: list = [];
         for elemento in cursor:
-            print(elemento);
+            entidad: Estados = Estados();
+            entidad.SetId(elemento[0]);
+            entidad.SetNombre(elemento[1]);
+            lista.append(entidad);
 
         cursor.close();
         conexion.close();
+
+        for estado in lista:
+            print(str(estado.GetId()) + ", " + estado.GetNombre());
 
 conexion = Conexion();
 conexion.CargarEstados();
