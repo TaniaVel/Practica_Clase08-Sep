@@ -1,5 +1,6 @@
 import datetime;
 import decimal;
+import pyodbc;
 
 """
     int (int-long)
@@ -33,5 +34,19 @@ class Conexion:
         user=user_ptyhon;
         password=Clas3s1Nt2024_!""";
 
-estado = Estados();
+    def CargarEstados(self) -> None:
+        conexion = pyodbc.connect(self.cadena_conexion);
+
+        consulta: str = """ SELECT * FROM estados; """;
+        cursor = conexion.cursor();
+        cursor.execute(consulta);
+
+        for elemento in cursor:
+            print(elemento);
+
+        cursor.close();
+        conexion.close();
+
+conexion = Conexion();
+conexion.CargarEstados();
 print("Hola mundo!");
