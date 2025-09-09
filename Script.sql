@@ -17,3 +17,7 @@ CREATE TABLE `db_universidad`.`personas` (
     PRIMARY KEY(`id`),
     CONSTRAINT `fk_personas__estados` FOREIGN KEY (`estado`) REFERENCES `estados`(`id`)
 );
+
+INSERT INTO `db_universidad`.`estados` (`nombre`) VALUES ('Solter@s');
+INSERT INTO `db_universidad`.`personas` (`cedula`, `nombre`, `estado`, `fecha`, `activo`) 
+VALUES ('6546465', 'Pepito Perez', 1, NOW(), 1);
