@@ -14,5 +14,3 @@
 - py nombre.py
 - py -m pip install nombre
     - pyodbc
- 
--- Cambio en la nube 2
