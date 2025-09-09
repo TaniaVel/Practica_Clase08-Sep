@@ -49,4 +49,4 @@ class Conexion:
 
 conexion = Conexion();
 conexion.CargarEstados();
-print("Hola mundo!");
+print("Conexión a base de datos MySQL");
